@@ -5,22 +5,21 @@ import reducer from '../reducers';
 
 
 export default function configureStore(initialState) {
-    const store = createStore(
-        reducer,
-        initialState,
-        compose(
-            applyMiddleware(thunk),
-            devTools()
-        )
-    );
+  const store = createStore(
+    reducer,
+    initialState,
+    compose(
+      applyMiddleware(thunk),
+      devTools()
+    )
+  );
 
-    if (module.hot) {
-        // Enable hot module replacement for reducers
-        module.hot.accept(() => {
-            const nextRootReducer = require('../reducers/index').default;
-            store.replaceReducer(nextRootReducer);
-        });
-    }
-
-    return store;
+  if (module.hot) {
+    // Enable hot module replacement for reducers
+    module.hot.accept(() => {
+      const nextRootReducer = require('../reducers/index').default;
+      store.replaceReducer(nextRootReducer);
+    });
+  }
+  return store;
 };
