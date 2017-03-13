@@ -7,7 +7,7 @@ import React, {
     TouchableHighlight,
 } from 'react-native';
 
-import Counter from './Counter';
+import BookmarksView from './bookmarks-view';
 
 class Root extends Component {
   renderScene(route, navigator) {
@@ -23,7 +23,7 @@ class Root extends Component {
     return (
       <Navigator
         renderScene={this.renderScene.bind(this)}
-        initialRoute={{ name: 'Counter', component: Counter }}
+        initialRoute={{ name: 'BookmarksView', component: BookmarksView }}
       />
     );
   }

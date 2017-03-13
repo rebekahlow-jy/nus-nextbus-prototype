@@ -10,24 +10,22 @@ import React, {
 
 import CustomScreen from './Screen';
 
-import { text, background } from '../styles';
-
 class Counter extends Component {
   render() {
     var { increment, decrement, counter, navigator } = this.props;
     return (
-      <View style={background.container}>
-        <Text style={text.p}>Clicked: {counter} times</Text>
+      <View>
+        <Text >Clicked: {counter} times</Text>
         <TouchableHighlight onPress={increment}>
-          <Text style={text.p}>+</Text>
+          <Text>+</Text>
         </TouchableHighlight>
         <TouchableHighlight onPress={decrement}>
-          <Text style={text.p}>-</Text>
+          <Text>-</Text>
         </TouchableHighlight>
         <TouchableHighlight onPress={() => navigator.push({component: CustomScreen})}>
-          <Text style={text.p}>Increment async</Text>
+          <Text>Increment async</Text>
         </TouchableHighlight>
-        <Text style={text.p}>HELLO</Text>
+        <Text>HELLO</Text>
       </View>
     );
   }

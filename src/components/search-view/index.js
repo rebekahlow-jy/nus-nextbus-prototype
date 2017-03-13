@@ -6,7 +6,9 @@ import {
 
 import NavigationBar from 'react-native-navbar';
 
-export default class CustomScreen extends Component {
+import styles from './styles';
+
+export default class SearchView extends Component {
   render() {
     const leftButtonConfig = {
       title: 'Back',
@@ -14,9 +16,9 @@ export default class CustomScreen extends Component {
     };
 
     return (
-      <View>
+      <View style={styles.background}>
         <NavigationBar
-          title={{ title: 'Custom screen', }}
+          title={{ title: 'Search', }}
           leftButton={leftButtonConfig}
         />
       </View>
