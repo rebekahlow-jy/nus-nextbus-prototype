@@ -9,12 +9,12 @@ import Container from '../../components/common/container'
 
 import styles from './styles';
 
-export default class SearchView extends Component {
+export default class NotificationsView extends Component {
   render() {
     var { navigator } = this.props;
     return (
       <Container navigator={navigator}>
-        <Text>[TITLE: SEARCH]</Text>
+        <Text>[TITLE: NOTIFICATIONS]</Text>
       </Container>
     );
   }

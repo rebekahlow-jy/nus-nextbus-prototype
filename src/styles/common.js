@@ -1,3 +1,4 @@
+export const backgroundColor = '#d3d3d3';
 export const primaryColor = '#9999CC';
 export const secondaryColor = '#ff0000';
 
@@ -9,3 +10,5 @@ export const primaryFontFamily = 'Open Sans';
 export const largeFontSize = 25;
 export const mediumFontSize = 15;
 export const smallFontSize = 9;
+
+export const iconSize = 50;
