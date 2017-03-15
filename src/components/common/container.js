@@ -20,21 +20,23 @@ export default class Container extends Component {
     return (
       <View style={styles.container}>
         {this.props.children}
-        <TouchableHighlight onPress={() => navigator.push({component: BookmarksView})}>
-          <Text>Bookmarks</Text>
-        </TouchableHighlight>
-        <TouchableHighlight onPress={() => navigator.push({component: SearchView})}>
-          <Text>Search</Text>
-        </TouchableHighlight>
-        <TouchableHighlight onPress={() => navigator.push({component: MapView})}>
-          <Text>Map</Text>
-        </TouchableHighlight>
-        <TouchableHighlight onPress={() => navigator.push({component: DirectoriesView})}>
-          <Text>Directories</Text>
-        </TouchableHighlight>
-        <TouchableHighlight onPress={() => navigator.push({component: NotificationsView})}>
-          <Text>Notifications</Text>
-        </TouchableHighlight>
+        <View style={styles.footer}>
+          <TouchableHighlight onPress={() => navigator.push({component: BookmarksView})}>
+            <Text>Bookmarks</Text>
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => navigator.push({component: SearchView})}>
+            <Text>Search</Text>
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => navigator.push({component: MapView})}>
+            <Text>Map</Text>
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => navigator.push({component: DirectoriesView})}>
+            <Text>Directories</Text>
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => navigator.push({component: NotificationsView})}>
+            <Text>Notifications</Text>
+          </TouchableHighlight>
+        </View>
       </View>
     );
   }

@@ -14,7 +14,9 @@ export default class NotificationsView extends Component {
     var { navigator } = this.props;
     return (
       <Container navigator={navigator}>
-        <Text>[TITLE: NOTIFICATIONS]</Text>
+        <View style={styles.contentContainer}>
+          <Text>[TITLE: NOTIFICATIONS]</Text>
+        </View>
       </Container>
     );
   }

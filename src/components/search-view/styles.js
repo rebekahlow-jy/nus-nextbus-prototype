@@ -1,11 +1,10 @@
 import { StyleSheet } from 'react-native';
 import {
-  secondaryColor,
+  cardBackgroundColor,
 } from '../../styles/common';
 
 export default StyleSheet.create({
-  background: {
+  contentContainer: {
     flex: 1,
-    backgroundColor: secondaryColor,
   },
 });

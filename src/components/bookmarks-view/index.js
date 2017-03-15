@@ -15,7 +15,7 @@ class BookmarksView extends Component {
     var { navigator } = this.props;
     return (
       <Container navigator={navigator}>
-        <View>
+        <View style={styles.contentContainer}>
           <Text>[TITLE: BOOKMARKS]</Text>
         </View>
       </Container>

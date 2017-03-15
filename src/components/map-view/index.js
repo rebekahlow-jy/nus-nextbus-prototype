@@ -14,7 +14,9 @@ export default class MapView extends Component {
     var { navigator } = this.props;
     return (
       <Container navigator={navigator}>
-        <Text>[TITLE: MAP]</Text>
+        <View style={styles.contentContainer}>
+          <Text>[TITLE: MAP]</Text>
+        </View>
       </Container>
     );
   }

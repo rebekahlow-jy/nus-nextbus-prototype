@@ -14,7 +14,9 @@ export default class SearchView extends Component {
     var { navigator } = this.props;
     return (
       <Container navigator={navigator}>
-        <Text>[TITLE: SEARCH]</Text>
+        <View style={styles.contentContainer}>
+          <Text>[TITLE: SEARCH]</Text>
+        </View>
       </Container>
     );
   }

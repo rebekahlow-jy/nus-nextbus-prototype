@@ -14,7 +14,9 @@ export default class DirectoriesView extends Component {
     var { navigator } = this.props;
     return (
       <Container navigator={navigator}>
-        <Text>[TITLE: DIRECTORIES]</Text>
+        <View style={styles.contentContainer}>
+          <Text>[TITLE: DIRECTORIES]</Text>
+        </View>
       </Container>
     );
   }
