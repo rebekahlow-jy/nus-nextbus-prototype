@@ -28,11 +28,13 @@ export const footerSubtitleColor = '#a7dde2';
 export const titleFont = 'bebasneue';
 export const contentFont = 'lato';
 
+export const jumboFontSize = 45;
 export const titleFontSize = 30;
 export const subtitleFontSize = 20;
 export const contentFontSize = 10;
 
-export const pageMargin = 12;
+export const pageMargin = 10;
+export const cardMargin = 5;
 export const footerMargin = 5;
 
 export const headerHeight = 50;

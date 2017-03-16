@@ -74,6 +74,9 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
   },
   cardContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     margin: pageMargin,
   },
   cardShadow: {
@@ -81,7 +84,6 @@ export default StyleSheet.create({
     height: shadowHeight,
   },
   footer: {
-    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
