@@ -1,34 +1,42 @@
 import React, {
     Component,
-    PropTypes,
     Text,
     View,
     TouchableHighlight,
 } from 'react-native';
 
-import Container from '../../components/common/container'
+import Container from '../../components/common/container';
+import Card from '../../components/common/card'
 
 import styles from './styles';
 
 class BookmarksView extends Component {
   render() {
     var { navigator } = this.props;
+    var title = 'Bookmarks';
     return (
-      <Container navigator={navigator}>
-        <View style={styles.contentContainer}>
-          <Text>[TITLE: BOOKMARKS]</Text>
-        </View>
+      <Container title={title} navigator={navigator}>
+        <Card>
+          <Text style={styles.cardTitle}>Title <Text style={styles.cardSubtitle}>Subtitle</Text></Text>
+          <View style={styles.cardHighlight}>
+            <Text style={styles.cardContent}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              ut labore et dolore magna aliqua.
+            </Text>
+          </View>
+        </Card>
+        <Card>
+          <Text style={styles.cardTitle}>Title <Text style={styles.cardSubtitle}>Subtitle</Text></Text>
+          <View style={styles.cardHighlight}>
+            <Text style={styles.cardContent}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              ut labore et dolore magna aliqua.
+            </Text>
+          </View>
+        </Card>
       </Container>
     );
   }
 }
-
-BookmarksView.propTypes = {
-  increment: PropTypes.func.isRequired,
-  incrementIfOdd: PropTypes.func.isRequired,
-  incrementAsync: PropTypes.func.isRequired,
-  decrement: PropTypes.func.isRequired,
-  counter: PropTypes.number.isRequired,
-};
 
 export default BookmarksView;

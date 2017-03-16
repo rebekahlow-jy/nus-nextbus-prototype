@@ -4,9 +4,7 @@ export const headerBackgroundColor = '#fc7753';
 export const headerShadowColor = '#f7a072';
 export const headerAccentColor = '#f25c34';
 export const headerTitleColor = '#fef2ef';
-export const headerSubtitleColor = '#fed9d0';
 export const headerAccentTitleColor = '#fdede9';
-
 
 export const cardBackgroundColor = '#f9f7f5';
 export const cardHighlightColor = '#fcfcfb';
@@ -23,8 +21,18 @@ export const footerSubtitleColor = '#a7dde2';
 export const titleFont = 'Bebas Neue';
 export const contentFont = 'Lato';
 
-export const largeFontSize = 25;
-export const mediumFontSize = 15;
-export const smallFontSize = 9;
+export const titleFontSize = 25;
+export const subtitleFontSize = 15;
+export const contentFontSize = 9;
 
-export const iconSize = 50;
+export const pageMargin = 10;
+
+export const headerHeight = 50;
+export const footerHeight = 50;
+export const shadowHeight = 10;
+export const cardHeight = 100;
+
+export const lineSpacing = 5;
+export const lineHeight = 12;
+
+export const iconSize = 20;
