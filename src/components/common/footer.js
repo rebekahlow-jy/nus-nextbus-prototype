@@ -13,6 +13,7 @@ import DirectoriesView from '../../components/directories-view';
 import NotificationsView from '../../components/notifications-view';
 
 import styles from './styles';
+import { footerFocusColor } from '../../styles/common';
 
 export default class Footer extends Component {
   render() {
@@ -20,36 +21,36 @@ export default class Footer extends Component {
     return (
       <View>
         <View style={styles.footer}>
-          <View style={styles.footerContent}>
-            <TouchableHighlight onPress={() => navigator.push({component: BookmarksView})}>
+          <TouchableHighlight underlayColor={footerFocusColor} onPress={() => navigator.push({component: BookmarksView})}>
+            <View style={styles.footerContent}>
               <Image style={styles.footerIcon} source={require("../../img/bookmarks-icon-resized.png")} />
-            </TouchableHighlight>
-            <Text style={styles.footerSubtitle}>Bookmarks</Text>
-          </View>
-          <View style={styles.footerContent}>
-            <TouchableHighlight onPress={() => navigator.push({component: SearchView})}>
+              <Text style={styles.footerSubtitle}>Bookmarks</Text>
+            </View>
+          </TouchableHighlight>
+          <TouchableHighlight underlayColor={footerFocusColor} onPress={() => navigator.push({component: SearchView})}>
+            <View style={styles.footerContent}>
               <Image style={styles.footerIcon} source={require("../../img/search-icon-resized.png")} />
-            </TouchableHighlight>
-            <Text style={styles.footerSubtitle}>Search</Text>
-          </View>
-          <View style={styles.footerContent}>
-            <TouchableHighlight onPress={() => navigator.push({component: MapView})}>
+              <Text style={styles.footerSubtitle}>Search</Text>
+            </View>
+          </TouchableHighlight>
+          <TouchableHighlight underlayColor={footerFocusColor} onPress={() => navigator.push({component: MapView})}>
+            <View style={styles.footerContent}>
               <Image style={styles.footerIcon} source={require("../../img/map-icon-resized.png")} />
-            </TouchableHighlight>
-            <Text style={styles.footerSubtitle}>Map</Text>
-          </View>
-          <View style={styles.footerContent}>
-            <TouchableHighlight onPress={() => navigator.push({component: DirectoriesView})}>
+              <Text style={styles.footerSubtitle}>Map</Text>
+            </View>
+          </TouchableHighlight>
+          <TouchableHighlight underlayColor={footerFocusColor} onPress={() => navigator.push({component: DirectoriesView})}>
+            <View style={styles.footerContent}>
               <Image style={styles.footerIcon} source={require("../../img/directories-icon-resized.png")} />
-            </TouchableHighlight>
-            <Text style={styles.footerSubtitle}>Directories</Text>
-          </View>
-          <View style={styles.footerContent}>
-            <TouchableHighlight onPress={() => navigator.push({component: NotificationsView})}>
+              <Text style={styles.footerSubtitle}>Directories</Text>
+            </View>
+          </TouchableHighlight>
+          <TouchableHighlight underlayColor={footerFocusColor} onPress={() => navigator.push({component: NotificationsView})}>
+            <View style={styles.footerContent}>
               <Image style={styles.footerIcon} source={require("../../img/notifications-icon-resized.png")} />
-            </TouchableHighlight>
-            <Text style={styles.footerSubtitle}>Notifications</Text>
-          </View>
+              <Text style={styles.footerSubtitle}>Notifications</Text>
+            </View>
+          </TouchableHighlight>
         </View>
         <View style={styles.footerShadow} />
       </View>

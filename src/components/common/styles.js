@@ -22,8 +22,9 @@ import {
   footerHeight,
   shadowHeight,
   cardHeight,
+  footerContentWidth,
   pageMargin,
-  footerMargin
+  footerMargin,
 } from '../../styles/common';
 
 export default StyleSheet.create({
@@ -80,6 +81,7 @@ export default StyleSheet.create({
     height: shadowHeight,
   },
   footer: {
+    flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -88,8 +90,9 @@ export default StyleSheet.create({
   },
   footerContent: {
     alignItems: 'center',
-    marginLeft: pageMargin,
-    marginRight: pageMargin,
+    marginTop: pageMargin,
+    marginBottom: pageMargin,
+    width: footerContentWidth,
   },
   footerIcon: {
     width: iconSize,
