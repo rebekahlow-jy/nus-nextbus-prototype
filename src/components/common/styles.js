@@ -36,6 +36,8 @@ export default StyleSheet.create({
   headerAction: {
     height: headerHeight,
     width: 100,
+    flexDirection: 'row',
+    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: headerAccentColor,
   },
@@ -48,10 +50,14 @@ export default StyleSheet.create({
     marginRight: pageMargin,
     color: headerTitleColor,
     fontSize: titleFontSize,
+    fontFamily: titleFont,
+    fontWeight: 'bold',
   },
   headerActionTitle: {
     color: headerAccentTitleColor,
     fontSize: titleFontSize,
+    fontFamily: titleFont,
+    fontWeight: 'bold',
   },
   container: {
     flex: 1,
@@ -93,6 +99,7 @@ export default StyleSheet.create({
   footerSubtitle: {
     color: footerSubtitleColor,
     fontSize: contentFontSize,
+    fontFamily: titleFont,
   },
   footerShadow: {
     height: shadowHeight,

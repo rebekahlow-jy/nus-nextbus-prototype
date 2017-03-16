@@ -18,11 +18,13 @@ export default StyleSheet.create({
     color: cardTitleColor,
     fontSize: titleFontSize,
     marginBottom: lineSpacing,
+    fontFamily: titleFont,
   },
   cardSubtitle: {
     color: cardSubtitleColor,
     fontSize: subtitleFontSize,
     marginBottom: lineSpacing,
+    fontFamily: titleFont,
   },
   cardHighlight: {
     backgroundColor: cardHighlightColor,

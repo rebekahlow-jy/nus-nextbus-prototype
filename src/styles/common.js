@@ -18,14 +18,14 @@ export const footerShadowColor = '#0b7781';
 export const footerTitleColor = '#e9f6f7';
 export const footerSubtitleColor = '#a7dde2';
 
-export const titleFont = 'Bebas Neue';
+export const titleFont = 'oswald';
 export const contentFont = 'Lato';
 
-export const titleFontSize = 25;
+export const titleFontSize = 20;
 export const subtitleFontSize = 15;
 export const contentFontSize = 9;
 
-export const pageMargin = 10;
+export const pageMargin = 12;
 
 export const headerHeight = 50;
 export const footerHeight = 50;
