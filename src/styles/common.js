@@ -46,3 +46,4 @@ export const lineSpacing = 5;
 export const lineHeight = 12;
 
 export const iconSize = 20;
+export const splashImageSize = screenWidth * 0.8 ;
