@@ -18,12 +18,12 @@ export const footerShadowColor = '#0b7781';
 export const footerTitleColor = '#e9f6f7';
 export const footerSubtitleColor = '#a7dde2';
 
-export const titleFont = 'oswald';
-export const contentFont = 'Lato';
+export const titleFont = 'bebasneue';
+export const contentFont = 'lato';
 
-export const titleFontSize = 20;
-export const subtitleFontSize = 15;
-export const contentFontSize = 9;
+export const titleFontSize = 30;
+export const subtitleFontSize = 20;
+export const contentFontSize = 10;
 
 export const pageMargin = 12;
 
@@ -31,6 +31,7 @@ export const headerHeight = 50;
 export const footerHeight = 50;
 export const shadowHeight = 10;
 export const cardHeight = 100;
+export const footerMargin = 5;
 
 export const lineSpacing = 5;
 export const lineHeight = 12;

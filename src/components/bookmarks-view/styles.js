@@ -35,5 +35,6 @@ export default StyleSheet.create({
     fontSize: contentFontSize,
     lineHeight: lineHeight,
     marginBottom: lineSpacing,
+    fontFamily: contentFont,
   }
 });

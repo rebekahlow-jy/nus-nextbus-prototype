@@ -24,6 +24,24 @@
 		B73229D9C7D141BB8ABDB9F2 /* Oswald.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAD40C4744D24541A33CCEA1 /* Oswald.ttf */; };
 		A05D86AA0F384CBAA5E73CCE /* oswald.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC3CA90E21CE44DDBC19DBFD /* oswald.ttf */; };
 		646FBCBF14FA420A938D78E5 /* oswald_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 308821AEA1E64E90A90ACEF5 /* oswald_bold.ttf */; };
+		72C63B8E700B4654ABE10B85 /* alegreyasans_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07A2BF8560C748B19B8F81D2 /* alegreyasans_bold.ttf */; };
+		8C798F41DEEF4BA4BF4A6322 /* alegreyasans_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 528597F556794F528E8AD477 /* alegreyasans_italic.ttf */; };
+		D8018BE2D061412CB30EC4F9 /* alegreyasans_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0475ADB1D6D744CEBFA978AF /* alegreyasans_light.ttf */; };
+		8D82266085764B84A92FB8FC /* alegreyasans_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD517A778FFD42BABCB39885 /* alegreyasans_medium.ttf */; };
+		668A016B1A1E40A696104DD5 /* alegreyasans_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C495D6ECAAD4225A533A778 /* alegreyasans_thin.ttf */; };
+		D2540503D7334AD0A02E8F30 /* alegreyasans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8AB7D69898425DA0794B4D /* alegreyasans.ttf */; };
+		C495457B885E4EAB8A2F1327 /* bebasneue.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFB819113CB94275B0C30359 /* bebasneue.otf */; };
+		2E389CBB3B5F4E669C648F6E /* montserrat_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BF5FAC634194A778570A2D5 /* montserrat_bold.ttf */; };
+		2BD52E7357FD40AB98A5B994 /* montserrat_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 093411C625DE4889ADC1BDA5 /* montserrat_italic.ttf */; };
+		9C3278807A3A402395FE6318 /* montserrat_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1706357BB8D04CE0B9D6C2A3 /* montserrat_light.ttf */; };
+		4C44A6FA6F684BA591ECD552 /* montserrat_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 476C24AF1A3E4017A3FDB480 /* montserrat_medium.ttf */; };
+		34223303856640BF924E2A04 /* montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E5FF4B1301B4EFA96FCB4F3 /* montserrat.ttf */; };
+		0A28C45CF5EE4D979BF37583 /* ubuntu_italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42219D60FD2E48AF8F8A2C6A /* ubuntu_italic.ttf */; };
+		D880B5F3B1754985B67E6AA0 /* ubuntu_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DF23BCDC2B14FC1BF104A39 /* ubuntu_light.ttf */; };
+		ECBB1BC9E28E42B1850216DC /* ubuntu_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 258424792A0144B2846752B7 /* ubuntu_medium.ttf */; };
+		0B91287544A248AAA43A9C0B /* ubuntu.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD67496AA00049FF8CEB36C0 /* ubuntu.ttf */; };
+		027186B6EEB4458B8B0FC695 /* ubuntucondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98954B161A7D4A7687C2F7A6 /* ubuntucondensed.ttf */; };
+		4C1079FFB1EA4BA6B0C35B1B /* unbuntu_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50FB8F10BC4E46708C717632 /* unbuntu_bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +149,24 @@
 		BAD40C4744D24541A33CCEA1 /* Oswald.ttf */ = {isa = PBXFileReference; name = "Oswald.ttf"; path = "../src/fonts/Oswald.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		EC3CA90E21CE44DDBC19DBFD /* oswald.ttf */ = {isa = PBXFileReference; name = "oswald.ttf"; path = "../src/fonts/oswald.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		308821AEA1E64E90A90ACEF5 /* oswald_bold.ttf */ = {isa = PBXFileReference; name = "oswald_bold.ttf"; path = "../src/fonts/oswald_bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		07A2BF8560C748B19B8F81D2 /* alegreyasans_bold.ttf */ = {isa = PBXFileReference; name = "alegreyasans_bold.ttf"; path = "../src/fonts/alegreyasans_bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		528597F556794F528E8AD477 /* alegreyasans_italic.ttf */ = {isa = PBXFileReference; name = "alegreyasans_italic.ttf"; path = "../src/fonts/alegreyasans_italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0475ADB1D6D744CEBFA978AF /* alegreyasans_light.ttf */ = {isa = PBXFileReference; name = "alegreyasans_light.ttf"; path = "../src/fonts/alegreyasans_light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CD517A778FFD42BABCB39885 /* alegreyasans_medium.ttf */ = {isa = PBXFileReference; name = "alegreyasans_medium.ttf"; path = "../src/fonts/alegreyasans_medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7C495D6ECAAD4225A533A778 /* alegreyasans_thin.ttf */ = {isa = PBXFileReference; name = "alegreyasans_thin.ttf"; path = "../src/fonts/alegreyasans_thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FB8AB7D69898425DA0794B4D /* alegreyasans.ttf */ = {isa = PBXFileReference; name = "alegreyasans.ttf"; path = "../src/fonts/alegreyasans.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CFB819113CB94275B0C30359 /* bebasneue.otf */ = {isa = PBXFileReference; name = "bebasneue.otf"; path = "../src/fonts/bebasneue.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9BF5FAC634194A778570A2D5 /* montserrat_bold.ttf */ = {isa = PBXFileReference; name = "montserrat_bold.ttf"; path = "../src/fonts/montserrat_bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		093411C625DE4889ADC1BDA5 /* montserrat_italic.ttf */ = {isa = PBXFileReference; name = "montserrat_italic.ttf"; path = "../src/fonts/montserrat_italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1706357BB8D04CE0B9D6C2A3 /* montserrat_light.ttf */ = {isa = PBXFileReference; name = "montserrat_light.ttf"; path = "../src/fonts/montserrat_light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		476C24AF1A3E4017A3FDB480 /* montserrat_medium.ttf */ = {isa = PBXFileReference; name = "montserrat_medium.ttf"; path = "../src/fonts/montserrat_medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E5FF4B1301B4EFA96FCB4F3 /* montserrat.ttf */ = {isa = PBXFileReference; name = "montserrat.ttf"; path = "../src/fonts/montserrat.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		42219D60FD2E48AF8F8A2C6A /* ubuntu_italic.ttf */ = {isa = PBXFileReference; name = "ubuntu_italic.ttf"; path = "../src/fonts/ubuntu_italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7DF23BCDC2B14FC1BF104A39 /* ubuntu_light.ttf */ = {isa = PBXFileReference; name = "ubuntu_light.ttf"; path = "../src/fonts/ubuntu_light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		258424792A0144B2846752B7 /* ubuntu_medium.ttf */ = {isa = PBXFileReference; name = "ubuntu_medium.ttf"; path = "../src/fonts/ubuntu_medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AD67496AA00049FF8CEB36C0 /* ubuntu.ttf */ = {isa = PBXFileReference; name = "ubuntu.ttf"; path = "../src/fonts/ubuntu.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		98954B161A7D4A7687C2F7A6 /* ubuntucondensed.ttf */ = {isa = PBXFileReference; name = "ubuntucondensed.ttf"; path = "../src/fonts/ubuntucondensed.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		50FB8F10BC4E46708C717632 /* unbuntu_bold.ttf */ = {isa = PBXFileReference; name = "unbuntu_bold.ttf"; path = "../src/fonts/unbuntu_bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +353,24 @@
 				BAD40C4744D24541A33CCEA1 /* Oswald.ttf */,
 				EC3CA90E21CE44DDBC19DBFD /* oswald.ttf */,
 				308821AEA1E64E90A90ACEF5 /* oswald_bold.ttf */,
+				07A2BF8560C748B19B8F81D2 /* alegreyasans_bold.ttf */,
+				528597F556794F528E8AD477 /* alegreyasans_italic.ttf */,
+				0475ADB1D6D744CEBFA978AF /* alegreyasans_light.ttf */,
+				CD517A778FFD42BABCB39885 /* alegreyasans_medium.ttf */,
+				7C495D6ECAAD4225A533A778 /* alegreyasans_thin.ttf */,
+				FB8AB7D69898425DA0794B4D /* alegreyasans.ttf */,
+				CFB819113CB94275B0C30359 /* bebasneue.otf */,
+				9BF5FAC634194A778570A2D5 /* montserrat_bold.ttf */,
+				093411C625DE4889ADC1BDA5 /* montserrat_italic.ttf */,
+				1706357BB8D04CE0B9D6C2A3 /* montserrat_light.ttf */,
+				476C24AF1A3E4017A3FDB480 /* montserrat_medium.ttf */,
+				5E5FF4B1301B4EFA96FCB4F3 /* montserrat.ttf */,
+				42219D60FD2E48AF8F8A2C6A /* ubuntu_italic.ttf */,
+				7DF23BCDC2B14FC1BF104A39 /* ubuntu_light.ttf */,
+				258424792A0144B2846752B7 /* ubuntu_medium.ttf */,
+				AD67496AA00049FF8CEB36C0 /* ubuntu.ttf */,
+				98954B161A7D4A7687C2F7A6 /* ubuntucondensed.ttf */,
+				50FB8F10BC4E46708C717632 /* unbuntu_bold.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -527,6 +581,24 @@
 				B73229D9C7D141BB8ABDB9F2 /* Oswald.ttf in Resources */,
 				A05D86AA0F384CBAA5E73CCE /* oswald.ttf in Resources */,
 				646FBCBF14FA420A938D78E5 /* oswald_bold.ttf in Resources */,
+				72C63B8E700B4654ABE10B85 /* alegreyasans_bold.ttf in Resources */,
+				8C798F41DEEF4BA4BF4A6322 /* alegreyasans_italic.ttf in Resources */,
+				D8018BE2D061412CB30EC4F9 /* alegreyasans_light.ttf in Resources */,
+				8D82266085764B84A92FB8FC /* alegreyasans_medium.ttf in Resources */,
+				668A016B1A1E40A696104DD5 /* alegreyasans_thin.ttf in Resources */,
+				D2540503D7334AD0A02E8F30 /* alegreyasans.ttf in Resources */,
+				C495457B885E4EAB8A2F1327 /* bebasneue.otf in Resources */,
+				2E389CBB3B5F4E669C648F6E /* montserrat_bold.ttf in Resources */,
+				2BD52E7357FD40AB98A5B994 /* montserrat_italic.ttf in Resources */,
+				9C3278807A3A402395FE6318 /* montserrat_light.ttf in Resources */,
+				4C44A6FA6F684BA591ECD552 /* montserrat_medium.ttf in Resources */,
+				34223303856640BF924E2A04 /* montserrat.ttf in Resources */,
+				0A28C45CF5EE4D979BF37583 /* ubuntu_italic.ttf in Resources */,
+				D880B5F3B1754985B67E6AA0 /* ubuntu_light.ttf in Resources */,
+				ECBB1BC9E28E42B1850216DC /* ubuntu_medium.ttf in Resources */,
+				0B91287544A248AAA43A9C0B /* ubuntu.ttf in Resources */,
+				027186B6EEB4458B8B0FC695 /* ubuntucondensed.ttf in Resources */,
+				4C1079FFB1EA4BA6B0C35B1B /* unbuntu_bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,6 +23,7 @@ import {
   shadowHeight,
   cardHeight,
   pageMargin,
+  footerMargin
 } from '../../styles/common';
 
 export default StyleSheet.create({
@@ -51,13 +52,11 @@ export default StyleSheet.create({
     color: headerTitleColor,
     fontSize: titleFontSize,
     fontFamily: titleFont,
-    fontWeight: 'bold',
   },
   headerActionTitle: {
     color: headerAccentTitleColor,
     fontSize: titleFontSize,
     fontFamily: titleFont,
-    fontWeight: 'bold',
   },
   container: {
     flex: 1,
@@ -95,6 +94,7 @@ export default StyleSheet.create({
   footerIcon: {
     width: iconSize,
     height: iconSize,
+    marginBottom: footerMargin,
   },
   footerSubtitle: {
     color: footerSubtitleColor,

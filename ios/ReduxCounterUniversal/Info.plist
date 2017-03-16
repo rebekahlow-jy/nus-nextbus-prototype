@@ -61,6 +61,24 @@
       <string>Oswald.ttf</string>
       <string>oswald.ttf</string>
       <string>oswald_bold.ttf</string>
+      <string>alegreyasans_bold.ttf</string>
+      <string>alegreyasans_italic.ttf</string>
+      <string>alegreyasans_light.ttf</string>
+      <string>alegreyasans_medium.ttf</string>
+      <string>alegreyasans_thin.ttf</string>
+      <string>alegreyasans.ttf</string>
+      <string>bebasneue.otf</string>
+      <string>montserrat_bold.ttf</string>
+      <string>montserrat_italic.ttf</string>
+      <string>montserrat_light.ttf</string>
+      <string>montserrat_medium.ttf</string>
+      <string>montserrat.ttf</string>
+      <string>ubuntu_italic.ttf</string>
+      <string>ubuntu_light.ttf</string>
+      <string>ubuntu_medium.ttf</string>
+      <string>ubuntu.ttf</string>
+      <string>ubuntucondensed.ttf</string>
+      <string>unbuntu_bold.ttf</string>
     </array>
   </dict>
 </plist>
