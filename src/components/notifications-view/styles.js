@@ -4,6 +4,7 @@ import {
   cardSubtitleColor,
   cardContentColor,
   cardHighlightColor,
+  jumboFontSize,
   titleFontSize,
   subtitleFontSize,
   contentFontSize,
@@ -11,30 +12,36 @@ import {
   contentFont,
   lineHeight,
   lineSpacing,
+  cardMargin,
 } from '../../styles/common';
 
 export default StyleSheet.create({
+  cardSection: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: cardMargin,
+    marginRight: cardMargin,
+  },
   cardTitle: {
     color: cardTitleColor,
-    fontSize: titleFontSize,
-    marginBottom: lineSpacing,
+    fontSize: jumboFontSize,
     fontFamily: titleFont,
   },
   cardSubtitle: {
     color: cardSubtitleColor,
     fontSize: subtitleFontSize,
-    marginBottom: lineSpacing,
     fontFamily: titleFont,
-  },
-  cardHighlight: {
-    backgroundColor: cardHighlightColor,
-    padding: lineSpacing,
   },
   cardContent: {
     color: cardContentColor,
     fontSize: contentFontSize,
     lineHeight: lineHeight,
+    marginTop: lineSpacing,
     marginBottom: lineSpacing,
     fontFamily: contentFont,
-  }
+  },
+  cardHighlight: {
+    backgroundColor: cardHighlightColor,
+    padding: lineSpacing,
+  },
 });
