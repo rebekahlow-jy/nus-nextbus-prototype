@@ -48,6 +48,7 @@ export default StyleSheet.create({
     height: textInputHeight,
     width: textInputWidth,
     marginTop: textInputMargin,
+    marginBottom: textInputMargin,
   },
   cardSection: {
     justifyContent: 'center',

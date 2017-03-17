@@ -9,6 +9,7 @@ import React, {
 import Container from '../../components/common/container';
 import Card from '../../components/common/card';
 
+import { cardSubtitleColor } from '../../styles/common';
 import styles from './styles';
 
 class SearchView extends Component {
@@ -27,8 +28,9 @@ class SearchView extends Component {
           </Text>
           <TextInput
             style={styles.textInput}
-            returnKeyType = {"next"}
-            autoFocus={true}
+            returnKeyType='next'
+            underlineColorAndroid={cardSubtitleColor}
+            autoFocus={false}
             onSubmitEditing={(event) => {
               this.refs.toInput.focus();
             }}
@@ -40,6 +42,8 @@ class SearchView extends Component {
           </Text>
           <TextInput
             ref='toInput'
+            underlineColorAndroid={cardSubtitleColor}
+            autoFocus={false}
             style={styles.textInput}
           />
         </View>
