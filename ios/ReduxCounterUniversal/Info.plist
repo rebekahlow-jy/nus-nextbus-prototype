@@ -79,6 +79,10 @@
       <string>ubuntu.ttf</string>
       <string>ubuntucondensed.ttf</string>
       <string>unbuntu_bold.ttf</string>
+      <string>lato_bold.ttf</string>
+      <string>lato_italic.ttf</string>
+      <string>lato_light.ttf</string>
+      <string>lato.ttf</string>
     </array>
   </dict>
 </plist>

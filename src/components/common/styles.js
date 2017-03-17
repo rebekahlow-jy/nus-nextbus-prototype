@@ -9,6 +9,7 @@ import {
   cardBackgroundColor,
   cardContentColor,
   cardShadowColor,
+  cardSubtitleColor,
   footerBackgroundColor,
   footerShadowColor,
   footerTitleColor,
@@ -70,7 +71,6 @@ export default StyleSheet.create({
   card: {
     backgroundColor: cardBackgroundColor,
     height: cardHeight,
-    margin: pageMargin,
     justifyContent: 'space-between',
   },
   cardContainer: {

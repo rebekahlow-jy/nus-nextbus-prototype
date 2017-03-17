@@ -34,18 +34,25 @@ export const subtitleFontSize = 20;
 export const contentFontSize = 10;
 
 export const pageMargin = 10;
+export const textLabelMargin = 15;
+export const textInputMargin = 5;
 export const cardMargin = 5;
 export const footerMargin = 5;
 
 export const headerHeight = 50;
 export const footerHeight = 50;
 export const shadowHeight = 10;
+export const textInputContainerHeight = 50;
 export const cardHeight = 100;
+export const lineHeight = 12;
+export const textLabelHeight = 20;
+export const textInputHeight = 40;
 
 export const footerContentWidth = screenWidth / 5;
+export const textInputLabelWidth = screenWidth * 0.15;
+export const textInputWidth = screenWidth * 0.65;
 
 export const lineSpacing = 5;
-export const lineHeight = 12;
 
 export const iconSize = 20;
-export const splashImageSize = screenWidth * 0.8 ;
+export const splashImageSize = screenWidth * 0.8;

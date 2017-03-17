@@ -10,15 +10,6 @@ import React, {
 import SplashView from './splash-view';
 
 class Root extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { isLoading: false };
-  }
-
-  componentWillUnmount() {
-    this.setState({ isLoading: true });
-  }
-
   renderScene(route, navigator) {
     console.log('Render Scenes', route);
     const Component = route.component;
