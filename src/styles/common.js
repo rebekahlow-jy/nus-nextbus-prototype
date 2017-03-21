@@ -32,6 +32,7 @@ export const jumboFontSize = 45;
 export const titleFontSize = 30;
 export const subtitleFontSize = 20;
 export const contentFontSize = 10;
+export const biggerContentFontSize = 15;
 
 export const pageMargin = 10;
 export const textLabelMargin = 15;
@@ -45,6 +46,7 @@ export const shadowHeight = 10;
 export const textInputContainerHeight = 50;
 export const cardHeight = 100;
 export const lineHeight = 12;
+export const biggerLineHeight = 16;
 export const textLabelHeight = 20;
 export const textInputHeight = 40;
 

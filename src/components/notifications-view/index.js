@@ -14,32 +14,23 @@ class NotificationsView extends Component {
   render() {
     var { navigator } = this.props;
     var title = 'Notifications';
+    var rightAction = '+';
     return (
-      <Container title={title} navigator={navigator}>
+      <Container title={title} navigator={navigator} rightAction={rightAction}>
         <Card>
           <View style={styles.cardSection}>
             <Text style={styles.cardTitle}>A1</Text>
           </View>
           <View style={styles.cardSection}>
             <Text style={styles.cardSubtitle}>Central Library</Text>
-            <Text style={styles.cardContent}>15:00-15.30 Wednesday, Thursday</Text>
+            <Text style={styles.cardContent}>06:00 Wednesday, Thursday</Text>
           </View>
           <View style={styles.cardSection}>
-            <Text style={styles.cardTitle}>3</Text>
-            <Text style={styles.cardSubtitle}>Mins</Text>
-          </View>
-        </Card>
-        <Card>
-          <View style={styles.cardSection}>
-            <Text style={styles.cardTitle}>D1</Text>
-          </View>
-          <View style={styles.cardSection}>
-            <Text style={styles.cardSubtitle}>COM2</Text>
-            <Text style={styles.cardContent}>18:00-18.30 Friday</Text>
-          </View>
-          <View style={styles.cardSection}>
-            <Text style={styles.cardTitle}>7</Text>
-            <Text style={styles.cardSubtitle}>Mins</Text>
+            <TouchableHighlight onPress={() => console.log('I CHANGED')}>
+              <View>
+                <Text>ON</Text>
+              </View>
+            </TouchableHighlight>
           </View>
         </Card>
       </Container>
