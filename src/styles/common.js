@@ -38,6 +38,7 @@ export const pageMargin = 10;
 export const textLabelMargin = 15;
 export const textInputMargin = 5;
 export const cardMargin = 5;
+export const cardMarginVert = 15;
 export const footerMargin = 5;
 
 export const headerHeight = 50;

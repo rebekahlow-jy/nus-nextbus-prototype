@@ -23,7 +23,7 @@ class NotificationsView extends Component {
           </View>
           <View style={styles.cardSection}>
             <Text style={styles.cardSubtitle}>Central Library</Text>
-            <Text style={styles.cardContent}>06:00 Wednesday, Thursday</Text>
+            <Text style={styles.cardContent}>06:00 Wed, Thur</Text>
           </View>
           <View style={styles.cardSection}>
             <TouchableHighlight onPress={() => console.log('I CHANGED')}>

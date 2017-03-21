@@ -13,7 +13,6 @@ import {
   contentFont,
   lineSpacing,
   cardMargin,
-  cardMarginVert,
 } from '../../styles/common';
 
 export default StyleSheet.create({
@@ -22,8 +21,6 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginLeft: cardMargin,
     marginRight: cardMargin,
-    marginTop: cardMarginVert,
-    marginBottom: cardMarginVert,
   },
   cardTitle: {
     color: cardTitleColor,
