@@ -4,6 +4,7 @@ import {
   cardSubtitleColor,
   cardContentColor,
   cardHighlightColor,
+  cardShadowColor,
   jumboFontSize,
   titleFontSize,
   subtitleFontSize,
@@ -22,14 +23,21 @@ import {
   cardMargin,
   textLabelMargin,
   textInputMargin,
+  headerShadowColor,
+  headerTitleColor,
+  pageBackgroundColor,
 } from '../../styles/common';
 
 export default StyleSheet.create({
   searchContainer: {
     backgroundColor: cardHighlightColor,
-    height: textInputContainerHeight,
+    height: textInputContainerHeight + textLabelMargin,
     flexDirection: 'row',
     justifyContent: 'center',
+  },
+  containerSpaceBetween: {
+    marginTop: textInputMargin * 2,
+    marginBottom: textInputMargin * 2,
   },
   searchLabel: {
     color: cardTitleColor,
@@ -40,6 +48,11 @@ export default StyleSheet.create({
     marginTop: textLabelMargin,
     marginLeft: pageMargin,
     marginRight: pageMargin,
+    marginBottom: textLabelMargin,
+  },
+  containerShadow: {
+    paddingBottom: textInputMargin * 2,
+    backgroundColor: cardShadowColor,
   },
   textInput: {
     fontFamily: titleFont,

@@ -15,6 +15,10 @@ import styles from './styles';
 class SearchView extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      fromValue: '',
+      toValue: '',
+    };
   }
 
   render() {
@@ -34,6 +38,8 @@ class SearchView extends Component {
             onSubmitEditing={(event) => {
               this.refs.toInput.focus();
             }}
+            value={this.state.fromValue}
+            onChangeText={(text) => { this.setState({ fromValue: text });} }
           />
         </View>
         <View style={styles.searchContainer}>
@@ -45,34 +51,44 @@ class SearchView extends Component {
             underlineColorAndroid={cardSubtitleColor}
             autoFocus={false}
             style={styles.textInput}
+            value={this.state.toValue}
+            onChangeText={(text) => { this.setState({ toValue: text });} }
           />
         </View>
-        <Card>
-          <View style={styles.cardSection}>
-            <Text style={styles.cardTitle}>D1</Text>
+        <View style={styles.containerShadow} />
+        <View style={styles.containerSpaceBetween} />
+        {
+          (this.state.fromValue !== '' || this.state.toValue !== '') ?
+          <View>
+            <Card>
+              <View style={styles.cardSection}>
+                <Text style={styles.cardTitle}>D1</Text>
+              </View>
+              <View style={styles.cardSection}>
+                <Text style={styles.cardSubtitle}>KR MRT</Text>
+                <Text style={styles.cardContent}>University Town > Central Library > BIZ2</Text>
+              </View>
+              <View style={styles.cardSection}>
+                <Text style={styles.cardTitle}>5</Text>
+                <Text style={styles.cardSubtitle}>Mins</Text>
+              </View>
+            </Card>
+            <Card>
+              <View style={styles.cardSection}>
+                <Text style={styles.cardTitle}>A1</Text>
+              </View>
+              <View style={styles.cardSection}>
+                <Text style={styles.cardSubtitle}>KR MRT</Text>
+                <Text style={styles.cardContent}>KR MRT > Central Library > PGP Terminal</Text>
+              </View>
+              <View style={styles.cardSection}>
+                <Text style={styles.cardTitle}>9</Text>
+                <Text style={styles.cardSubtitle}>Mins</Text>
+              </View>
+            </Card>
           </View>
-          <View style={styles.cardSection}>
-            <Text style={styles.cardSubtitle}>KR MRT</Text>
-            <Text style={styles.cardContent}>University Town > Central Library > BIZ2</Text>
-          </View>
-          <View style={styles.cardSection}>
-            <Text style={styles.cardTitle}>5</Text>
-            <Text style={styles.cardSubtitle}>Mins</Text>
-          </View>
-        </Card>
-        <Card>
-          <View style={styles.cardSection}>
-            <Text style={styles.cardTitle}>A1</Text>
-          </View>
-          <View style={styles.cardSection}>
-            <Text style={styles.cardSubtitle}>KR MRT</Text>
-            <Text style={styles.cardContent}>KR MRT > Central Library > PGP Terminal</Text>
-          </View>
-          <View style={styles.cardSection}>
-            <Text style={styles.cardTitle}>9</Text>
-            <Text style={styles.cardSubtitle}>Mins</Text>
-          </View>
-        </Card>
+          : <View></View>
+        }
       </Container>
     );
   }
