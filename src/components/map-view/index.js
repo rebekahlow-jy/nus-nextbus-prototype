@@ -2,6 +2,7 @@ import React, {
     Component,
     Text,
     View,
+    Image,
     TouchableHighlight,
 } from 'react-native';
 
@@ -15,10 +16,7 @@ class MapView extends Component {
     var { navigator } = this.props;
     var title = 'Map';
     return (
-      <Container title={title} navigator={navigator}>
-        <Card>
-          <Text style={styles.cardTitle}>Title</Text>
-        </Card>
+      <Container title={title} navigator={navigator} mapNotification={true}>
       </Container>
     );
   }

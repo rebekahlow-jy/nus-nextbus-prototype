@@ -3,6 +3,7 @@ import React, {
 } from 'react-native';
 
 const screenWidth = Dimensions.get('window').width;
+const screenHeight = Dimensions.get('window').height;
 
 export const pageBackgroundColor = '#f2efea';
 
@@ -12,8 +13,7 @@ export const headerAccentColor = '#f25c34';
 export const headerTitleColor = '#fef2ef';
 export const headerAccentTitleColor = '#fdede9';
 
-export const cardBackgroundColor = '#f9f7f5';
-export const cardHighlightColor = '#fcfcfb';
+export const cardBackgroundColor = '#fcfcfb';
 export const cardShadowColor = '#dcdad5';
 export const cardTitleColor = '#6e6d6b';
 export const cardSubtitleColor = '#a1a09d';
@@ -50,6 +50,7 @@ export const lineHeight = 12;
 export const biggerLineHeight = 16;
 export const textLabelHeight = 20;
 export const textInputHeight = 40;
+export const mapHeight = 100;
 
 export const footerContentWidth = screenWidth / 5;
 export const textInputLabelWidth = screenWidth * 0.15;

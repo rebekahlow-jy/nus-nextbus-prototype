@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
 import {
+  headerHeight,
   cardTitleColor,
   cardSubtitleColor,
   cardContentColor,
-  cardHighlightColor,
+  cardBackgroundColor,
   titleFontSize,
   subtitleFontSize,
   contentFontSize,
@@ -11,30 +12,53 @@ import {
   contentFont,
   lineHeight,
   lineSpacing,
+  pageMargin,
+  footerHeight,
+  mapHeight,
+  screenWidth,
+  screenHeight,
 } from '../../styles/common';
 
 export default StyleSheet.create({
-  cardTitle: {
-    color: cardTitleColor,
-    fontSize: titleFontSize,
-    marginBottom: lineSpacing,
-    fontFamily: titleFont,
+  mapNotificationContainer: {
+    height: headerHeight,
+    backgroundColor: cardBackgroundColor,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingLeft: pageMargin,
+    paddingRight: pageMargin,
   },
-  cardSubtitle: {
+  mapNotificationText: {
     color: cardSubtitleColor,
     fontSize: subtitleFontSize,
     marginBottom: lineSpacing,
     fontFamily: titleFont,
   },
-  cardHighlight: {
-    backgroundColor: cardHighlightColor,
-    padding: lineSpacing,
+  imageContainer: {
+    height: mapHeight,
   },
-  cardContent: {
-    color: cardContentColor,
+  mapPinContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 150,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  mapPinTextContainer: {
+    flexDirection: 'row',
+    backgroundColor: cardBackgroundColor,
+    width: 100,
+  },
+  mapPinText: {
+    color: cardSubtitleColor,
     fontSize: contentFontSize,
-    lineHeight: lineHeight,
+    fontFamily: titleFont,
+    marginTop: lineSpacing,
     marginBottom: lineSpacing,
-    fontFamily: contentFont,
+    marginLeft: lineSpacing,
+    marginRight: lineSpacing,
   }
 });

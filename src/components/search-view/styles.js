@@ -3,7 +3,7 @@ import {
   cardTitleColor,
   cardSubtitleColor,
   cardContentColor,
-  cardHighlightColor,
+  cardBackgroundColor,
   cardShadowColor,
   jumboFontSize,
   titleFontSize,
@@ -30,7 +30,7 @@ import {
 
 export default StyleSheet.create({
   searchContainer: {
-    backgroundColor: cardHighlightColor,
+    backgroundColor: cardBackgroundColor,
     height: textInputContainerHeight + textLabelMargin,
     flexDirection: 'row',
     justifyContent: 'center',
@@ -88,7 +88,7 @@ export default StyleSheet.create({
     fontFamily: contentFont,
   },
   cardHighlight: {
-    backgroundColor: cardHighlightColor,
+    backgroundColor: cardBackgroundColor,
     padding: lineSpacing,
   },
 });
