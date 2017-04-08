@@ -17,6 +17,8 @@ import {
   mapHeight,
   screenWidth,
   screenHeight,
+  textInputMargin,
+  cardShadowColor,
 } from '../../styles/common';
 
 export default StyleSheet.create({
@@ -37,6 +39,10 @@ export default StyleSheet.create({
   },
   imageContainer: {
     height: mapHeight,
+  },
+  containerShadow: {
+    paddingBottom: textInputMargin * 2,
+    backgroundColor: cardShadowColor,
   },
   mapPinContainer: {
     position: 'absolute',

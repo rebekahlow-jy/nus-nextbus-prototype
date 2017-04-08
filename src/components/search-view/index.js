@@ -61,7 +61,6 @@ class SearchView extends Component {
           />
         </View>
         <View style={styles.containerShadow} />
-        <View style={styles.containerSpaceBetween} />
         {
           (this.state.fromValue !== '' || this.state.toValue !== '') ?
           <View>

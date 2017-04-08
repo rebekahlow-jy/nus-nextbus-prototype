@@ -61,6 +61,7 @@ class Map extends Component {
             Drag pin on map to see the nearest bus stop
           </Text>
         </View>
+        <View style={styles.containerShadow} />
         <View style={styles.imageContainer}>
           <Image source={require("../../img/nus-map.jpg")}>
             <View style={styles.mapPinContainer}>

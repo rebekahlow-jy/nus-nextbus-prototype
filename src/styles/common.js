@@ -14,6 +14,7 @@ export const headerTitleColor = '#fef2ef';
 export const headerAccentTitleColor = '#fdede9';
 
 export const cardBackgroundColor = '#fcfcfb';
+export const cardButtonActiveColor = '#f7f7f7';
 export const cardShadowColor = '#dcdad5';
 export const cardTitleColor = '#6e6d6b';
 export const cardSubtitleColor = '#a1a09d';
