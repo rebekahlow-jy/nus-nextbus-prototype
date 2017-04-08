@@ -7,13 +7,12 @@ import {
   jumboFontSize,
   titleFontSize,
   subtitleFontSize,
-  biggerContentFontSize,
-  biggerLineHeight,
+  contentFontSize,
   titleFont,
   contentFont,
+  lineHeight,
   lineSpacing,
   cardMargin,
-  cardMarginVert,
 } from '../../styles/common';
 
 export default StyleSheet.create({
@@ -22,8 +21,6 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginLeft: cardMargin,
     marginRight: cardMargin,
-    marginTop: cardMarginVert,
-    marginBottom: cardMarginVert,
   },
   cardTitle: {
     color: cardTitleColor,
@@ -37,8 +34,8 @@ export default StyleSheet.create({
   },
   cardContent: {
     color: cardContentColor,
-    fontSize: biggerContentFontSize,
-    lineHeight: biggerLineHeight,
+    fontSize: contentFontSize,
+    lineHeight: lineHeight,
     marginTop: lineSpacing,
     marginBottom: lineSpacing,
     fontFamily: contentFont,

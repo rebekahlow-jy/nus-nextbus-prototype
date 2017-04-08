@@ -76,7 +76,6 @@ class DirectoriesView extends Component {
           </TouchableHighlight>
         </View>
         <View style={styles.containerShadow} />
-        <View style={styles.containerSpaceBetween} />
         {
           this.state.showByBuses == true ?
             <View>
@@ -121,10 +120,10 @@ class DirectoriesView extends Component {
                       <TouchableHighlight
                         underlayColor={modalBackgroundColor}
                         onPress={() => {
-                          this.setState({ hasA1StopSelected: true, A1StopName: 'LT6'});
+                          this.setState({ hasA1StopSelected: true, A1StopName: 'LT29'});
                           this.setA1ModalVisible(!this.state.isA1StopModalVisible);
                       }}>
-                        <Text style={styles.modalContent}>LT6</Text>
+                        <Text style={styles.modalContent}>LT29</Text>
                       </TouchableHighlight>
                       <TouchableHighlight
                         underlayColor={modalBackgroundColor}
