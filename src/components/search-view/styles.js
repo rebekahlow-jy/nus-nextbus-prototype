@@ -26,6 +26,7 @@ import {
   headerShadowColor,
   headerTitleColor,
   pageBackgroundColor,
+  headerBackgroundColor,
 } from '../../styles/common';
 
 export default StyleSheet.create({
@@ -76,6 +77,16 @@ export default StyleSheet.create({
   },
   cardSubtitle: {
     color: cardSubtitleColor,
+    fontSize: subtitleFontSize,
+    fontFamily: titleFont,
+  },
+  cardTitleActive: {
+    color: headerBackgroundColor,
+    fontSize: jumboFontSize,
+    fontFamily: titleFont,
+  },
+  cardSubtitleActive: {
+    color: headerBackgroundColor,
     fontSize: subtitleFontSize,
     fontFamily: titleFont,
   },

@@ -4,6 +4,8 @@ import React, {
     Text,
     View,
     TextInput,
+    TouchableHighlight,
+    ToastAndroid,
 } from 'react-native';
 
 import Container from '../../components/common/container';
@@ -18,12 +20,15 @@ class SearchView extends Component {
     this.state = {
       fromValue: '',
       toValue: '',
+      isA1Bookmarked: false,
+      isD1Bookmarked: false,
     };
   }
 
   render() {
     var { navigator } = this.props;
     var title = 'Search';
+    var cardBackgroundColor = '#fcfcfb';
     return (
       <Container title={title} navigator={navigator}>
         <View style={styles.searchContainer}>
@@ -68,10 +73,18 @@ class SearchView extends Component {
                 <Text style={styles.cardSubtitle}>KR MRT</Text>
                 <Text style={styles.cardContent}>University Town > Central Library > BIZ2</Text>
               </View>
-              <View style={styles.cardSection}>
-                <Text style={styles.cardTitle}>5</Text>
-                <Text style={styles.cardSubtitle}>Mins</Text>
-              </View>
+              <TouchableHighlight
+                underlayColor={cardBackgroundColor}
+                onPress={() => {
+                  this.setState({ isD1Bookmarked: !this.state.isD1Bookmarked});
+                  this.state.isD1Bookmarked == true ? ToastAndroid.show('Added to Bookmarks!', ToastAndroid.SHORT) : ToastAndroid.show('Remove from Bookmarks!', ToastAndroid.SHORT);
+                }}
+              >
+                <View style={styles.cardSection}>
+                  <Text style={this.state.isD1Bookmarked == true ? styles.cardTitleActive : styles.cardTitle}>5</Text>
+                  <Text style={this.state.isD1Bookmarked == true ? styles.cardSubtitleActive : styles.cardSubtitle}>Mins</Text>
+                </View>
+              </TouchableHighlight>
             </Card>
             <Card>
               <View style={styles.cardSection}>
@@ -81,10 +94,18 @@ class SearchView extends Component {
                 <Text style={styles.cardSubtitle}>KR MRT</Text>
                 <Text style={styles.cardContent}>KR MRT > Central Library > PGP Terminal</Text>
               </View>
-              <View style={styles.cardSection}>
-                <Text style={styles.cardTitle}>9</Text>
-                <Text style={styles.cardSubtitle}>Mins</Text>
-              </View>
+              <TouchableHighlight
+                underlayColor={cardBackgroundColor}
+                onPress={() => {
+                  this.setState({ isA1Bookmarked: !this.state.isA1Bookmarked});
+                  this.state.isA1Bookmarked == true ? ToastAndroid.show('Added to Bookmarks', ToastAndroid.SHORT) : ToastAndroid.show('Remove from Bookmarks', ToastAndroid.SHORT);
+                }}
+              >
+                <View style={styles.cardSection}>
+                  <Text style={this.state.isA1Bookmarked == true ? styles.cardTitleActive : styles.cardTitle}>9</Text>
+                  <Text style={this.state.isA1Bookmarked == true ? styles.cardSubtitleActive : styles.cardSubtitle}>Mins</Text>
+                </View>
+              </TouchableHighlight>
             </Card>
           </View>
           : <View></View>
