@@ -77,7 +77,7 @@ class SearchView extends Component {
                 underlayColor={cardBackgroundColor}
                 onPress={() => {
                   this.setState({ isD1Bookmarked: !this.state.isD1Bookmarked});
-                  this.state.isD1Bookmarked == true ? ToastAndroid.show('Added to Bookmarks!', ToastAndroid.SHORT) : ToastAndroid.show('Remove from Bookmarks!', ToastAndroid.SHORT);
+                  this.state.isD1Bookmarked == true ? ToastAndroid.show('Added to Bookmarks', ToastAndroid.SHORT) : ToastAndroid.show('Removed from Bookmarks', ToastAndroid.SHORT);
                 }}
               >
                 <View style={styles.cardSection}>
@@ -98,7 +98,7 @@ class SearchView extends Component {
                 underlayColor={cardBackgroundColor}
                 onPress={() => {
                   this.setState({ isA1Bookmarked: !this.state.isA1Bookmarked});
-                  this.state.isA1Bookmarked == true ? ToastAndroid.show('Added to Bookmarks', ToastAndroid.SHORT) : ToastAndroid.show('Remove from Bookmarks', ToastAndroid.SHORT);
+                  this.state.isA1Bookmarked == true ? ToastAndroid.show('Added to Bookmarks', ToastAndroid.SHORT) : ToastAndroid.show('Removed from Bookmarks', ToastAndroid.SHORT);
                 }}
               >
                 <View style={styles.cardSection}>

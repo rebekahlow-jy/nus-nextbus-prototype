@@ -4,6 +4,8 @@ import React, {
     View,
     Image,
     TouchableHighlight,
+    ToastAndroid,
+    Modal,
 } from 'react-native';
 
 import Container from '../../components/common/container';
@@ -21,15 +23,28 @@ class DirectoriesView extends Component {
       showByStops: false,
       isA1Bookmarked: false,
       isD1Bookmarked: false,
-      openA1StopSelector: false,
-      openD1StopSelector: false,
+      isA1StopModalVisible: false,
+      isD1StopModalVisible: false,
+      hasA1StopSelected: false,
+      hasD1StopSelected: false,
+      A1StopName: '',
+      D1StopName: 'University Town'
     };
+  }
+
+  setA1ModalVisible(isA1StopModalVisible) {
+    this.setState({isA1StopModalVisible: isA1StopModalVisible});
+  }
+
+  setD1ModalVisible(isD1StopModalVisible) {
+    this.setState({isD1StopModalVisible: isD1StopModalVisible});
   }
 
   render() {
     var { navigator } = this.props;
     var title = 'Directories';
     var cardBackgroundColor = '#fcfcfb';
+    var modalBackgroundColor = 'rgba(52, 52, 52, 0)';
     return (
       <Container title={title} navigator={navigator}>
         <View style={styles.tabContainer}>
@@ -54,29 +69,100 @@ class DirectoriesView extends Component {
                   <Text style={styles.cardTitle}>A1</Text>
                 </View>
                 <View style={styles.cardSection}>
-                  <TouchableHighlight underlayColor={cardBackgroundColor} onPress={() => { this.setState({ openA1StopSelector: true});}}>
+                  <TouchableHighlight underlayColor={cardBackgroundColor} onPress={() => { this.setA1ModalVisible(true);}}>
                     {
-                      this.state.openA1StopSelector == true ?
-                       <Text style={styles.cardSubtitle}>Central Library</Text>
+                      this.state.hasA1StopSelected == true ?
+                       <Text style={styles.cardSubtitle}>{this.state.A1StopName}</Text>
                       : <Text style={styles.cardSubtitle}>[Select Bus Stop]</Text>
                     }
                   </TouchableHighlight>
                   <Text style={styles.cardContent}>KR MRT > Central Library > PGP Terminal</Text>
                 </View>
+                <Modal
+                  animationType={"slide"}
+                  transparent={false}
+                  visible={this.state.isA1StopModalVisible}
+                  onRequestClose={() => {this.setA1ModalVisible(false);
+                }}>
+                  <View style={styles.modalContainer}>
+                    <View style={styles.modalBackgroundContainer}>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setA1ModalVisible(!this.state.isA1StopModalVisible);
+                      }}>
+                        <Text style={styles.closeButton}> X </Text>
+                      </TouchableHighlight>
+                      <Text style={styles.modalTitle}>Select Bus Stop</Text>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setState({ hasA1StopSelected: true, A1StopName: 'KR MRT'});
+                          this.setA1ModalVisible(!this.state.isA1StopModalVisible);
+                      }}>
+                        <Text style={styles.modalContent}>KR MRT</Text>
+                      </TouchableHighlight>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setState({ hasA1StopSelected: true, A1StopName: 'LT6'});
+                          this.setA1ModalVisible(!this.state.isA1StopModalVisible);
+                      }}>
+                        <Text style={styles.modalContent}>LT6</Text>
+                      </TouchableHighlight>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setState({ hasA1StopSelected: true, A1StopName: 'University Hall'});
+                          this.setA1ModalVisible(!this.state.isA1StopModalVisible);
+                      }}>
+                        <Text style={styles.modalContent}>University Hall</Text>
+                      </TouchableHighlight>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setState({ hasA1StopSelected: true, A1StopName: 'Central Library'});
+                          this.setA1ModalVisible(!this.state.isA1StopModalVisible);
+                      }}>
+                        <Text style={styles.modalContent}>Central Library</Text>
+                      </TouchableHighlight>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setState({ hasA1StopSelected: true, A1StopName: 'COM2'});
+                          this.setA1ModalVisible(!this.state.isA1StopModalVisible);
+                      }}>
+                        <Text style={styles.modalContent}>COM2</Text>
+                      </TouchableHighlight>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setState({ hasA1StopSelected: true, A1StopName: 'PGP Terminal'});
+                          this.setA1ModalVisible(!this.state.isA1StopModalVisible);
+                      }}>
+                        <Text style={styles.modalContent}>PGP Terminal</Text>
+                      </TouchableHighlight>
+                    </View>
+                  </View>
+                </Modal>
                 {
-                  this.state.isA1Bookmarked == true ?
-                    <TouchableHighlight underlayColor={cardBackgroundColor} onPress={() => { this.setState({ isA1Bookmarked: false});}}>
+                  this.state.hasA1StopSelected == true ?
+                    <TouchableHighlight
+                      underlayColor={cardBackgroundColor}
+                      onPress={() => {
+                        this.setState({ isA1Bookmarked: !this.state.isA1Bookmarked});
+                        this.state.isA1Bookmarked == true ? ToastAndroid.show('Added to Bookmarks', ToastAndroid.SHORT) : ToastAndroid.show('Removed from Bookmarks', ToastAndroid.SHORT);
+                      }}
+                    >
                       <View style={styles.cardSection}>
-                        <Image source={require("../../img/directories-bookmark-icon-added.png")} />
-                        <Text style={styles.cardSubtitle}> - </Text>
+                        <Text style={this.state.isA1Bookmarked == true ? styles.cardTitleActive : styles.cardTitle}>9</Text>
+                        <Text style={this.state.isA1Bookmarked == true ? styles.cardSubtitleActive : styles.cardSubtitle}>Mins</Text>
                       </View>
                     </TouchableHighlight>
-                  : <TouchableHighlight underlayColor={cardBackgroundColor} onPress={() => { this.setState({ isA1Bookmarked: true});}}>
-                    <View style={styles.cardSection}>
-                      <Image source={require("../../img/directories-bookmark-icon.png")} />
-                      <Text style={styles.cardSubtitle}> + </Text>
+                  : <View style={styles.cardSection}>
+                      <Text style={styles.cardTitleHidden}>9</Text>
+                      <Text style={styles.cardSubtitleHidden}>Mins</Text>
                     </View>
-                  </TouchableHighlight>
                 }
               </Card>
               <Card>
@@ -84,23 +170,100 @@ class DirectoriesView extends Component {
                   <Text style={styles.cardTitle}>D1</Text>
                 </View>
                 <View style={styles.cardSection}>
-                  <Text style={styles.cardSubtitle}>[Select Bus Stop]</Text>
+                  <TouchableHighlight underlayColor={cardBackgroundColor} onPress={() => { this.setD1ModalVisible(true);}}>
+                    {
+                      this.state.hasD1StopSelected == true ?
+                       <Text style={styles.cardSubtitle}>{this.state.D1StopName}</Text>
+                      : <Text style={styles.cardSubtitle}>[Select Bus Stop]</Text>
+                    }
+                  </TouchableHighlight>
                   <Text style={styles.cardContent}>University Town > Central Library > BIZ2</Text>
                 </View>
+                <Modal
+                  animationType={"slide"}
+                  transparent={false}
+                  visible={this.state.isD1StopModalVisible}
+                  onRequestClose={() => {this.setD1ModalVisible(false);
+                }}>
+                  <View style={styles.modalContainer}>
+                    <View style={styles.modalBackgroundContainer}>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setD1ModalVisible(!this.state.isD1StopModalVisible);
+                      }}>
+                        <Text style={styles.closeButton}> X </Text>
+                      </TouchableHighlight>
+                      <Text style={styles.modalTitle}>Select Bus Stop</Text>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setState({ hasD1StopSelected: true, D1StopName: 'University Town'});
+                          this.setD1ModalVisible(!this.state.isD1StopModalVisible);
+                      }}>
+                        <Text style={styles.modalContent}>University Town</Text>
+                      </TouchableHighlight>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setState({ hasD1StopSelected: true, D1StopName: 'Opp Museum'});
+                          this.setD1ModalVisible(!this.state.isD1StopModalVisible);
+                      }}>
+                        <Text style={styles.modalContent}>Opp Museum</Text>
+                      </TouchableHighlight>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setState({ hasD1StopSelected: true, D1StopName: 'Yusof Ishak House'});
+                          this.setD1ModalVisible(!this.state.isD1StopModalVisible);
+                      }}>
+                        <Text style={styles.modalContent}>Yusof Ishak House</Text>
+                      </TouchableHighlight>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setState({ hasD1StopSelected: true, D1StopName: 'Central Library'});
+                          this.setD1ModalVisible(!this.state.isD1StopModalVisible);
+                      }}>
+                        <Text style={styles.modalContent}>Central Library</Text>
+                      </TouchableHighlight>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setState({ hasD1StopSelected: true, D1StopName: 'COM2'});
+                          this.setD1ModalVisible(!this.state.isD1StopModalVisible);
+                      }}>
+                        <Text style={styles.modalContent}>COM2</Text>
+                      </TouchableHighlight>
+                      <TouchableHighlight
+                        underlayColor={modalBackgroundColor}
+                        onPress={() => {
+                          this.setState({ hasD1StopSelected: true, D1StopName: 'BIZ2'});
+                          this.setD1ModalVisible(!this.state.isD1StopModalVisible);
+                      }}>
+                        <Text style={styles.modalContent}>BIZ2</Text>
+                      </TouchableHighlight>
+                    </View>
+                  </View>
+                </Modal>
                 {
-                  this.state.isD1Bookmarked == true ?
-                    <TouchableHighlight underlayColor={cardBackgroundColor} onPress={() => { this.setState({ isD1Bookmarked: false});}}>
+                  this.state.hasD1StopSelected == true ?
+                    <TouchableHighlight
+                      underlayColor={cardBackgroundColor}
+                      onPress={() => {
+                        this.setState({ isD1Bookmarked: !this.state.isD1Bookmarked});
+                        this.state.isD1Bookmarked == true ? ToastAndroid.show('Added to Bookmarks', ToastAndroid.SHORT) : ToastAndroid.show('Removed from Bookmarks', ToastAndroid.SHORT);
+                      }}
+                    >
                       <View style={styles.cardSection}>
-                        <Image source={require("../../img/directories-bookmark-icon-added.png")} />
-                        <Text style={styles.cardSubtitle}> - </Text>
+                        <Text style={this.state.isD1Bookmarked == true ? styles.cardTitleActive : styles.cardTitle}>5</Text>
+                        <Text style={this.state.isD1Bookmarked == true ? styles.cardSubtitleActive : styles.cardSubtitle}>Mins</Text>
                       </View>
                     </TouchableHighlight>
-                  : <TouchableHighlight underlayColor={cardBackgroundColor} onPress={() => { this.setState({ isD1Bookmarked: true});}}>
-                    <View style={styles.cardSection}>
-                      <Image source={require("../../img/directories-bookmark-icon.png")} />
-                      <Text style={styles.cardSubtitle}> + </Text>
+                  : <View style={styles.cardSection}>
+                      <Text style={styles.cardTitleHidden}>5</Text>
+                      <Text style={styles.cardSubtitleHidden}>Mins</Text>
                     </View>
-                  </TouchableHighlight>
                 }
               </Card>
             </View>

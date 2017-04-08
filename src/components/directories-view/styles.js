@@ -19,6 +19,7 @@ import {
   cardShadowColor,
   headerBackgroundColor,
   screenWidth,
+  screenHeight,
 } from '../../styles/common';
 
 export default StyleSheet.create({
@@ -62,13 +63,28 @@ export default StyleSheet.create({
     fontSize: jumboFontSize,
     fontFamily: titleFont,
   },
-  cardImageTitle: {
-    color: cardTitleColor,
-    fontSize: subtitleFontSize + 7,
-    fontFamily: titleFont,
-  },
   cardSubtitle: {
     color: cardSubtitleColor,
+    fontSize: subtitleFontSize,
+    fontFamily: titleFont,
+  },
+  cardTitleActive: {
+    color: headerBackgroundColor,
+    fontSize: jumboFontSize,
+    fontFamily: titleFont,
+  },
+  cardSubtitleActive: {
+    color: headerBackgroundColor,
+    fontSize: subtitleFontSize,
+    fontFamily: titleFont,
+  },
+  cardTitleHidden: {
+    color: 'transparent',
+    fontSize: jumboFontSize,
+    fontFamily: titleFont,
+  },
+  cardSubtitleHidden: {
+    color: 'transparent',
     fontSize: subtitleFontSize,
     fontFamily: titleFont,
   },
@@ -84,4 +100,38 @@ export default StyleSheet.create({
     backgroundColor: cardHighlightColor,
     padding: lineSpacing,
   },
+  modalContainer: {
+    flex: 1,
+    alignItems: 'center',
+    marginTop: 50,
+    marginBottom: 50,
+  },
+  modalBackgroundContainer: {
+    backgroundColor: 'rgba(52, 52, 52, 0.8)',
+    height: 400,
+    width: 300,
+    borderRadius: 10,
+  },
+  closeButton: {
+    marginTop: lineHeight,
+    marginRight: lineHeight,
+    color: cardBackgroundColor,
+    fontSize: jumboFontSize - 10,
+    fontFamily: titleFont,
+    textAlign: 'right',
+  },
+  modalTitle: {
+    marginTop: lineHeight,
+    color: cardBackgroundColor,
+    fontSize: jumboFontSize,
+    fontFamily: titleFont,
+    textAlign: 'center',
+  },
+  modalContent: {
+    marginTop: lineHeight,
+    color: cardBackgroundColor,
+    fontSize: subtitleFontSize,
+    fontFamily: contentFont,
+    textAlign: 'center',
+  }
 });
