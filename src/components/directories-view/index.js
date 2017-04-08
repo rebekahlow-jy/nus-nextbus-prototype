@@ -2,7 +2,6 @@ import React, {
     Component,
     Text,
     View,
-    Image,
     TouchableHighlight,
     ToastAndroid,
     Modal,
@@ -10,7 +9,6 @@ import React, {
 
 import Container from '../../components/common/container';
 import Card from '../../components/common/card';
-
 import BookmarksView from '../../components/bookmarks-view';
 
 import styles from './styles';

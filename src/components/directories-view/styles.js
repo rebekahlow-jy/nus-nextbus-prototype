@@ -108,7 +108,7 @@ export default StyleSheet.create({
   },
   modalBackgroundContainer: {
     backgroundColor: 'rgba(52, 52, 52, 0.8)',
-    height: 400,
+    height: 350,
     width: 300,
     borderRadius: 10,
   },
@@ -122,15 +122,16 @@ export default StyleSheet.create({
   },
   modalTitle: {
     marginTop: lineHeight,
+    marginBottom: lineHeight,
     color: cardBackgroundColor,
-    fontSize: jumboFontSize,
+    fontSize: titleFontSize,
     fontFamily: titleFont,
     textAlign: 'center',
   },
   modalContent: {
     marginTop: lineHeight,
     color: cardBackgroundColor,
-    fontSize: subtitleFontSize,
+    fontSize: subtitleFontSize - 5,
     fontFamily: contentFont,
     textAlign: 'center',
   }
