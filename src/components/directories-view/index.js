@@ -19,6 +19,7 @@ class DirectoriesView extends Component {
     this.state = {
       showByBuses: true,
       showByStops: false,
+
       isA1Bookmarked: false,
       isD1Bookmarked: false,
       isA1StopModalVisible: false,
@@ -26,7 +27,16 @@ class DirectoriesView extends Component {
       hasA1StopSelected: false,
       hasD1StopSelected: false,
       A1StopName: '',
-      D1StopName: 'University Town'
+      D1StopName: '',
+
+      isCLBBookmarked: false,
+      isUTownBookmarked: false,
+      isCLBBusModalVisible: false,
+      isUTownBusModalVisible: false,
+      hasCLBBusSelected: false,
+      hasUTownBusSelected: false,
+      CLBBusName: 'A1',
+      UTownBusName: '',
     };
   }
 
@@ -36,6 +46,14 @@ class DirectoriesView extends Component {
 
   setD1ModalVisible(isD1StopModalVisible) {
     this.setState({isD1StopModalVisible: isD1StopModalVisible});
+  }
+
+  setCLBModalVisible(isCLBBusModalVisible) {
+    this.setState({isCLBBusModalVisible: isCLBBusModalVisible});
+  }
+
+  setUTownModalVisible(isUTownBusModalVisible) {
+    this.setState({isUTownBusModalVisible: isUTownBusModalVisible});
   }
 
   render() {
@@ -265,11 +283,184 @@ class DirectoriesView extends Component {
                 }
               </Card>
             </View>
-          : <Card>
-              <View>
-                <Text style={styles.cardTitle}>Bus Stops</Text>
+          : <View>
+            <Card>
+              <View style={styles.cardSection}>
+                <TouchableHighlight underlayColor={cardBackgroundColor} onPress={() => { this.setCLBModalVisible(true);}}>
+                  {
+                    this.state.hasCLBBusSelected == true ?
+                     <Text style={styles.cardTitle}>{this.state.CLBBusName}</Text>
+                    : <View>
+                      <Text style={styles.cardSubtitleDark}>[Select</Text>
+                      <Text style={styles.cardSubtitleDark}>  Bus]</Text>
+                    </View>
+                  }
+                </TouchableHighlight>
               </View>
+              <Modal
+                animationType={"slide"}
+                transparent={false}
+                visible={this.state.isCLBBusModalVisible}
+                onRequestClose={() => {this.setCLBModalVisible(false);
+              }}>
+                <View style={styles.modalContainer}>
+                  <View style={styles.modalBackgroundContainer}>
+                    <TouchableHighlight
+                      underlayColor={modalBackgroundColor}
+                      onPress={() => {
+                        this.setCLBModalVisible(!this.state.isCLBBusModalVisible);
+                    }}>
+                      <Text style={styles.closeButton}> X </Text>
+                    </TouchableHighlight>
+                    <Text style={styles.modalTitle}>Select Bus</Text>
+                    <TouchableHighlight
+                      underlayColor={modalBackgroundColor}
+                      onPress={() => {
+                        this.setState({ hasCLBBusSelected: true, CLBBusName: 'A1'});
+                        this.setCLBModalVisible(!this.state.isCLBBusModalVisible);
+                    }}>
+                      <Text style={styles.modalContent}>A1</Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                      underlayColor={modalBackgroundColor}
+                      onPress={() => {
+                        this.setState({ hasCLBBusSelected: true, CLBBusName: 'D1'});
+                        this.setCLBModalVisible(!this.state.isCLBBusModalVisible);
+                    }}>
+                      <Text style={styles.modalContent}>D1</Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                      underlayColor={modalBackgroundColor}
+                      onPress={() => {
+                        this.setState({ hasCLBBusSelected: true, CLBBusName: 'B1'});
+                        this.setCLBModalVisible(!this.state.isCLBBusModalVisible);
+                    }}>
+                      <Text style={styles.modalContent}>B1</Text>
+                    </TouchableHighlight>
+                  </View>
+                </View>
+              </Modal>
+              <View style={styles.cardSection}>
+                <Text style={styles.cardSubtitle}>Central Library</Text>
+                {
+                  this.state.hasCLBBusSelected == true ?
+                  <Text style={styles.cardContent}>KR MRT > Central Library > PGP Terminal</Text>
+                  : null
+                }
+              </View>
+              {
+                this.state.hasCLBBusSelected == true ?
+                  <TouchableHighlight
+                    underlayColor={cardBackgroundColor}
+                    onPress={() => {
+                      this.setState({ isCLBBookmarked: !this.state.isCLBBookmarked});
+                      this.state.isCLBBookmarked == true ? ToastAndroid.show('Added to Bookmarks', ToastAndroid.SHORT) : ToastAndroid.show('Removed from Bookmarks', ToastAndroid.SHORT);
+                    }}
+                  >
+                    <View style={styles.cardSection}>
+                      <Text style={this.state.isCLBBookmarked == true ? styles.cardTitleActive : styles.cardTitle}>5</Text>
+                      <Text style={this.state.isCLBBookmarked == true ? styles.cardSubtitleActive : styles.cardSubtitle}>Mins</Text>
+                    </View>
+                  </TouchableHighlight>
+                : <View style={styles.cardSection}>
+                    <Text style={styles.cardTitleHidden}>5</Text>
+                    <Text style={styles.cardSubtitleHidden}>Mins</Text>
+                  </View>
+              }
             </Card>
+            <Card>
+              <View style={styles.cardSection}>
+                <TouchableHighlight underlayColor={cardBackgroundColor} onPress={() => { this.setUTownModalVisible(true);}}>
+                  {
+                    this.state.hasUTownBusSelected == true ?
+                     <Text style={styles.cardTitle}>{this.state.UTownBusName}</Text>
+                    : <View>
+                      <Text style={styles.cardSubtitleDark}>[Select</Text>
+                      <Text style={styles.cardSubtitleDark}>  Bus]</Text>
+                    </View>
+                  }
+                </TouchableHighlight>
+              </View>
+              <Modal
+                animationType={"slide"}
+                transparent={false}
+                visible={this.state.isUTownBusModalVisible}
+                onRequestClose={() => {this.setUTownModalVisible(false);
+              }}>
+                <View style={styles.modalContainer}>
+                  <View style={styles.modalBackgroundContainer}>
+                    <TouchableHighlight
+                      underlayColor={modalBackgroundColor}
+                      onPress={() => {
+                        this.setUTownModalVisible(!this.state.isUTownBusModalVisible);
+                    }}>
+                      <Text style={styles.closeButton}> X </Text>
+                    </TouchableHighlight>
+                    <Text style={styles.modalTitle}>Select Bus</Text>
+                    <TouchableHighlight
+                      underlayColor={modalBackgroundColor}
+                      onPress={() => {
+                        this.setState({ hasUTownBusSelected: true, UTownBusName: 'D1'});
+                        this.setUTownModalVisible(!this.state.isUTownBusModalVisible);
+                    }}>
+                      <Text style={styles.modalContent}>D1</Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                      underlayColor={modalBackgroundColor}
+                      onPress={() => {
+                        this.setState({ hasUTownBusSelected: true, UTownBusName: 'D2'});
+                        this.setUTownModalVisible(!this.state.isUTownBusModalVisible);
+                    }}>
+                      <Text style={styles.modalContent}>D2</Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                      underlayColor={modalBackgroundColor}
+                      onPress={() => {
+                        this.setState({ hasUTownBusSelected: true, UTownBusName: 'B1'});
+                        this.setUTownModalVisible(!this.state.isUTownBusModalVisible);
+                    }}>
+                      <Text style={styles.modalContent}>B1</Text>
+                    </TouchableHighlight>
+                    <TouchableHighlight
+                      underlayColor={modalBackgroundColor}
+                      onPress={() => {
+                        this.setState({ hasUTownBusSelected: true, UTownBusName: 'B2'});
+                        this.setUTownModalVisible(!this.state.isUTownBusModalVisible);
+                    }}>
+                      <Text style={styles.modalContent}>B2</Text>
+                    </TouchableHighlight>
+                  </View>
+                </View>
+              </Modal>
+              <View style={styles.cardSection}>
+                <Text style={styles.cardSubtitle}>University Town</Text>
+                {
+                  this.state.hasUTownBusSelected == true ?
+                  <Text style={styles.cardContent}>University Town > Central Library > BIZ2</Text>
+                  : null
+                }
+              </View>
+              {
+                this.state.hasUTownBusSelected == true ?
+                  <TouchableHighlight
+                    underlayColor={cardBackgroundColor}
+                    onPress={() => {
+                      this.setState({ isUTownBookmarked: !this.state.isUTownBookmarked});
+                      this.state.isUTownBookmarked == true ? ToastAndroid.show('Added to Bookmarks', ToastAndroid.SHORT) : ToastAndroid.show('Removed from Bookmarks', ToastAndroid.SHORT);
+                    }}
+                  >
+                    <View style={styles.cardSection}>
+                      <Text style={this.state.isUTownBookmarked == true ? styles.cardTitleActive : styles.cardTitle}>9</Text>
+                      <Text style={this.state.isUTownBookmarked == true ? styles.cardSubtitleActive : styles.cardSubtitle}>Mins</Text>
+                    </View>
+                  </TouchableHighlight>
+                : <View style={styles.cardSection}>
+                    <Text style={styles.cardTitleHidden}>9</Text>
+                    <Text style={styles.cardSubtitleHidden}>Mins</Text>
+                  </View>
+              }
+            </Card>
+          </View>
         }
       </Container>
     );

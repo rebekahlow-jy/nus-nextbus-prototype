@@ -88,6 +88,11 @@ export default StyleSheet.create({
     fontSize: subtitleFontSize,
     fontFamily: titleFont,
   },
+  cardSubtitleDark: {
+    color: cardTitleColor,
+    fontSize: subtitleFontSize * 1.2,
+    fontFamily: titleFont,
+  },
   cardContent: {
     color: cardContentColor,
     fontSize: contentFontSize,
