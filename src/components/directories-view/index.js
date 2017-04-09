@@ -221,10 +221,10 @@ class DirectoriesView extends Component {
                       <TouchableHighlight
                         underlayColor={modalBackgroundColor}
                         onPress={() => {
-                          this.setState({ hasD1StopSelected: true, D1StopName: 'Opp Museum'});
+                          this.setState({ hasD1StopSelected: true, D1StopName: 'Museum'});
                           this.setD1ModalVisible(!this.state.isD1StopModalVisible);
                       }}>
-                        <Text style={styles.modalContent}>Opp Museum</Text>
+                        <Text style={styles.modalContent}>Museum</Text>
                       </TouchableHighlight>
                       <TouchableHighlight
                         underlayColor={modalBackgroundColor}
